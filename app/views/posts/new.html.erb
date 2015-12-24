@@ -1,8 +1,24 @@
 <%= simple_form_for @post do |f| %>
-	<%= f.input :cover_photo %>
-	<%= f.input :title, placeholder: 'Title of your story', :class => 'post_title', label: false %>
+	<%= f.input :cover_photo, required: true %>
+	<%= f.input :title, placeholder: 'Title of your story', :class => 'post_title', label: false, required: true%>
 	<%= f.input :intro, placeholder: 'Short Intro', :class => 'post_intro', label: false %>
-	<%= f.input :body, placeholder: 'Tell your story', :class => 'post_body', label: false %>
+    <p>By <%= current_user.full_name %>
+	<%= f.input :body, placeholder: 'Tell your story', :class => 'post_body', label: false, required: true %>
 
 	<%= f.button :submit %>
 <% end %>
+
+<script>
+var toolbars = {
+    add: {
+        buttons: ['image', 'camera', 'hline', 'table'],
+        tabIndex: 2
+    },
+    styles: {
+        selections: AlloyEditor.Selections,
+        tabIndex: 1
+    }
+};
+
+AlloyEditor.editable('post_body');
+</script>

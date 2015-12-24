@@ -1,4 +1,6 @@
-<%= image_tag @post.cover_photo %>
+<div id='cover_photo'>
+	<%= image_tag @post.cover_photo, class: 'cover_photo' %>
+</div>
 <h1><%= @post.title %></h1>
 <h2><%= @post.intro %></h2>
 <p><%= @post.body %></p>

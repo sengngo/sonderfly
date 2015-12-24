@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151221211802) do
+ActiveRecord::Schema.define(version: 20151222184712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,28 @@ ActiveRecord::Schema.define(version: 20151221211802) do
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
   add_index "comments", ["user_id", "post_id"], name: "index_comments_on_user_id_and_post_id", using: :btree
+
+  create_table "cover_photos", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.text     "caption"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cover_photos", ["post_id"], name: "index_cover_photos_on_post_id", using: :btree
+  add_index "cover_photos", ["user_id", "post_id"], name: "index_cover_photos_on_user_id_and_post_id", using: :btree
+
+  create_table "post_photos", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.text     "caption"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "post_photos", ["post_id"], name: "index_post_photos_on_post_id", using: :btree
+  add_index "post_photos", ["user_id", "post_id"], name: "index_post_photos_on_user_id_and_post_id", using: :btree
 
   create_table "posts", force: true do |t|
     t.integer  "user_id",                     null: false
@@ -43,6 +65,14 @@ ActiveRecord::Schema.define(version: 20151221211802) do
 
   add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+
+  create_table "profile_photos", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "profile_photos", ["user_id"], name: "index_profile_photos_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
