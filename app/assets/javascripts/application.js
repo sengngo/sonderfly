@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require alloyeditor/dist/alloy-editor/alloy-editor-all
 //= require_tree .
