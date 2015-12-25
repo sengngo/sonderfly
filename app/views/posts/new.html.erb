@@ -1,12 +1,14 @@
-<%= simple_form_for @post do |f| %>
-	<%= f.input :cover_photo, required: true %>
-	<%= f.input :title, placeholder: 'Title of your story', :class => 'post_title ae-placeholder', label: false, required: true %>
-	<%= f.input :intro, placeholder: 'Short Intro', :class => 'post_intro ae-placeholder', label: false %>
-    <p>By <%= current_user.full_name %>
-	<%= f.input :body, placeholder: 'Tell your story', :class => 'post_body editable', label: false, required: true, input_html: { contenteditable: true } %>
+<div class="post_wrapper">
+    <%= simple_form_for @post do |f| %>
+    	<%= f.input :cover_photo, required: true %>
+    	<%= f.input :title, placeholder: 'Title of your story', :class => 'post_title ae-placeholder', label: false, required: true %>
+    	<%= f.input :intro, placeholder: 'Short Intro', :class => 'post_intro ae-placeholder', label: false %>
+        <p>By <%= current_user.full_name %>
+    	<%= f.input :body, placeholder: 'Tell your story', :class => 'post_body', label: false, required: true, input_html: { contenteditable: true } %>
 
-	<%= f.button :submit %>
-<% end %>
+    	<%= f.button :submit %>
+    <% end %>
+</div>
 
 <script>
 AlloyEditor.editable('post_body');
