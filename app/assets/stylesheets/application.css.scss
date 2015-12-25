@@ -9,9 +9,24 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require froala_editor.min.css
+ *= require froala_style.min.css
+ *= require font-awesome
+ *= require plugins/char_counter.min.css
+ *= require plugins/fullscreen.min.css
+ *= require plugins/image_manager.min.css
+ *= require plugins/image.min.css
+ *= require plugins/line_breaker.min.css
+ *= require plugins/video.min.css
  *= require_tree .
  */
 
-.cover_photo {
-	width: 75%;
+.post_wrapper {
+	margin: 100px;
 }
+
+.cover_photo {
+	width: 800px;
+}
+
+

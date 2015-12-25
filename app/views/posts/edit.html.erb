@@ -1,8 +1,48 @@
-<%= simple_form_for @post do |f| %>
+<div class='post_wrapper'>
+	<%= image_tag @post.cover_photo, class: 'cover_photo' %>
+	<%= simple_form_for @post do |f| %>
 	<%= f.input :cover_photo %>
-	<%= f.input :title, placeholder: 'Title of your story', :class => 'post_title', label: false %>
+	<%= f.input :title, placeholder: 'Title of your story', :class => 'post_title', label: false  %>
 	<%= f.input :intro, placeholder: 'Short Intro', :class => 'post_intro', label: false %>
+    <p>By <%= current_user.full_name %>
 	<%= f.input :body, placeholder: 'Tell your story', :class => 'post_body', label: false %>
 
 	<%= f.button :submit %>
 <% end %>
+</div>
+
+ <script>
+  $(function() {
+    $('#post_body').froalaEditor({
+      toolbarInline: true,
+      charCounterCount: true,
+      toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink','insertVideo'],
+      imageEditButtons: ['imageAlign', 'imageRemove', 'linkEdit', 'linkRemove', 'imageAlt'],
+      imageMove: false
+      imageSizeButtons: ['imageBack']
+      imageStyles: {
+    		class1: 'Class 1',
+    		class2: 'Class 2',
+    		class3: 'Class 3',
+    		
+    	imageUploadToS3: {
+    bucket: 'sonderfly-photos',
+    // Your bucket region.
+    region: 's3-us-east-1',
+    keyStart: 'uploads/',
+    callback: function (url, key) {
+      // The URL and Key returned from Amazon.
+      console.log (url);
+      console.log (key);
+    },
+    params: {
+      acl: 'public-read', // ACL according to Amazon Documentation.
+      AWSAccessKeyId: 'AKIAITBSZJ7L5D6LZE7A', // Access Key from Amazon.
+      policy: 'POLICY_STRING', // Policy string computed in the backend.
+      signature: '', // Signature computed in the backend.
+    }
+  }
+    })
+  });
+</script>
+
