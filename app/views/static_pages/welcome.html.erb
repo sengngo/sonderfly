@@ -1,5 +1,20 @@
+  <div id='home_background'>
+    <header class='cf'>
+      <div class="wrapper_wide">
 
- <div class="main" id="theGrid" >
+      </div>
+
+    </header>
+  
+    <div class="wrapper_skinny">
+      <h1>Together, <br /> let's discover the world!</h1>
+
+      <%= link_to "Explore", posts_path,class: "button button_highlight" %>
+      <%= link_to "Get Started", new_user_registration_path, class: "button button_highlight" %>
+    </div>
+  </div>
+
+  <div class="main" id="theGrid" >
     <section class="grid">
       <% @posts.each do |post| %>
         <%= link_to (image_tag post.cover_photo), post, class: "grid_item" %>
@@ -12,4 +27,3 @@
         </div>
       <% end %>
   </div><!-- /main -->
-

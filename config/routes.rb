@@ -1,6 +1,7 @@
 Sonderfly::Application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
-  root "posts#index"
+  root "static_pages#welcome"
+  
   resources :posts do
     resources :comments
   end

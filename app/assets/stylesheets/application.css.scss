@@ -12,13 +12,104 @@
  *= require_tree .
  *= require alloyeditor/dist/alloy-editor/assets/alloy-editor-ocean-min
  */
+$white: #fff;
+$highlight: #5fc6db;
+
+.wrapper_wide {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.wrapper_skinny {
+	width: 60%;
+	margin: 0 auto;
+	padding-top: 10%;
+}
+
+.cf:before, .cf:after {
+	content: "";
+	display: table;
+}
+
+cf:after {
+	clear: both;
+}
+
+.button {
+	color: $white;
+	text-decoration: none;
+	font-size: 1rem;
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	outline: none;
+	border: 1px $highlight;
+}
+
+.button_highlight {
+	background: $highlight;
+	&:hover {
+		background: darken($highlight, 10%)
+	}
+}
+
+#home_background {
+	background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url(../assets/homepage_background.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	header {
+		#logo {
+			float: left;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+	h1 {
+		color: $white;
+		font-size: 3.5rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+		margin: 7rem 0 2rem 0;
+
+	}
+}
+
+/* -- Welcome -- */
+.post_list {
+	text-decoration: none;
+	
+
+	.post {
+		display: block;
+		text-align: center;
+		float: left;
+		img {
+		width: 33%;
+		display: block;
+		}
+	} /* -- post -- */
+}
 
 
 /* -- Post -- */
 .post_wrapper {
 	margin: 100px;
+
+	p {
+		.img {
+		width: 100%;
+	}
+	}
+	
 }
 
 .cover_photo {
-	width: 75%;
+	color: #fff;
+  position: relative;
+  background-color: #1c2023;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
 }
