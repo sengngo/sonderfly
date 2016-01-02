@@ -1,29 +1,28 @@
-<h2>Sign up</h2>
+<div class="wrapper_wide_sessions">
+  <div class="wrapper_skinny_sessions">
+  <h2>Sign up</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-  	<%= f.label 'First Name' %>
-  	<%= f.input :first_name, placeholder: 'First Name', required: true, autofocus: true, label: false %>
-  	
-  	<%= f.label 'Last Name' %>
-  	<%= f.input :last_name, placeholder: 'Last Name', required: true, label: false %>
+    <div class="form-inputs">
+    	<%= f.input :first_name, placeholder: 'First Name', required: true, autofocus: true, label: false %>
 
-  	<%= f.label 'Email' %>
-    <%= f.input :email, placeholder: 'Email, i.e. JoeDoe@gmail.com', required: true, label: false %>
+    	<%= f.input :last_name, placeholder: 'Last Name', required: true, label: false %>
 
-    <%= f.label 'Password' %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), label: false  %>
+      <%= f.input :email, placeholder: 'Email, i.e. JoeDoe@gmail.com', required: true, label: false %>
 
-    <%= f.label 'Confirm Password' %>
-    <%= f.input :password_confirmation, required: true, label: false  %>
+      <%= f.input :password, placeholder: 'Password', required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), label: false  %>
+
+      <%= f.input :password_confirmation, placeholder: 'Confirm password',  required: true, label: false  %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up", class: 'button button_highlight' %>
+      <p> By creating an account, I accept <%= link_to "Sonderfly's Terms of Service", "#" %>.</p>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-    <p> By creating an account, I accept <%= link_to "Sonderfly's Terms of Service", "#" %>.</p>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

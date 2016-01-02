@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require alloyeditor/dist/alloy-editor/alloy-editor-all
+//= require slideout.js/dist/slideout
 //= require_tree .

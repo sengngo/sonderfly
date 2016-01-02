@@ -1,0 +1,18 @@
+
+
+ <div class="main" id="theGrid" >
+    <h1>Latest Posts</h1>
+    <section class="grid">
+      <% @posts.each do |post| %>
+      <div class='grid__item'>
+        <%= image_tag post.cover_photo, class: 'cover_photo_index' %>
+        <h2 class="title title--preview"><%= link_to post.title, post %></h2>
+        <span class="category"><%= post.intro %></span>
+        <div class="meta meta--preview">
+          <p class="author"> By <%= post.user.full_name %></p>
+          <span class="meta__date"><i class="fa fa-calendar-o"></i><%= post.created_at.strftime("%b %d, %Y") %></span>
+          <span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span>
+        </div> <!-- meta meta-preview -->
+      </div>
+      <% end %>
+  </div><!-- /main -->

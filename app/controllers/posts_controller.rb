@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 	
 	def index
 		@posts = Post.all.order("created_at DESC")
-		# change to categories
+		@last = Post.last
 	end
 
 	def show

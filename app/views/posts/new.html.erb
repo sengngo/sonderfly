@@ -1,21 +1,30 @@
-<div class="post_wrapper">
-    <%= simple_form_for @post do |f| %>
-    	<%= f.input :cover_photo, required: true %>
-    	<%= f.input :title, placeholder: 'Title of your story', :class => 'post_title ae-placeholder', label: false, required: true %>
-    	<%= f.input :intro, placeholder: 'Short Intro', :class => 'post_intro ae-placeholder', label: false %>
-        <p>By <%= current_user.full_name %>
-    	<%= f.input :body, placeholder: 'Tell your story', :class => 'post_body', label: false, required: true, input_html: { contenteditable: true } %>
+<style media="screen">
+  .cover_photo { background-image: url(<%= @post.cover_photo %>); }
+</style>
 
-    	<%= f.button :submit %>
-    <% end %>
+    <div class="cover_photo">
+      <div class="post_form">
+        <%= simple_form_for @post do |f| %>
+            <%= f.input :cover_photo, label: false %>
+            <%= f.input :title, placeholder: 'Title of your story', :class => 'post_title', label: false %>
+            <%= f.input :intro, placeholder: 'Short Intro', :class => 'post_intro', label: false %>
+    
+      </div>
+    </div>
+
+    <div class="post_body_edit">
+            <%= f.input :body, placeholder: 'Tell your story', :class => 'post_body', label: false %>
+
+            <%= f.button :submit %>
+        <% end %>
+    </div>
 </div>
-
 <script>
 AlloyEditor.editable('post_body');
 
 var toolbars = {
     add: {
-        buttons: ['image', 'camera', 'hline', 'table'],
+        buttons: ['image'],
         tabIndex: 2
     },
     styles: {
@@ -23,6 +32,4 @@ var toolbars = {
         tabIndex: 1
     }
 };
-
-
 </script>

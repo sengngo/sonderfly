@@ -1,7 +1,17 @@
 Sonderfly::Application.routes.draw do
+  get "users/dashboard"
   devise_for :users, :controllers => { registrations: 'registrations' }
-  root "static_pages#welcome"
+
+  authenticated do
+    root :to => 'users#dashboard', as: :authenticated
+  end
+  get 'dashboard' => 'users#dashboard', as: "user_dashboard"
+  root :to => 'static_pages#welcome'
   
+  get "static_pages/about_sonderfly" => 'static_pages#about_sonderfly'
+  get "static_pages/guidelines" => 'static_pages#guidelines'
+
+
   resources :posts do
     resources :comments
   end
