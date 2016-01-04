@@ -11,7 +11,6 @@
  *= require_self
  *= require_tree .
  *= require alloyeditor/dist/alloy-editor/assets/alloy-editor-ocean
- *= require slideout.js/index
  */
 $serif: 'Playfair Display', serif;
 $sansserif: 'Martel Sans', Arial, sans-serif;
@@ -158,6 +157,7 @@ cf:after {
 	border: none;
 	text-align: center;
 	background-color: transparent;
+	color: #fff;
 }
 
 #post_intro {
