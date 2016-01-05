@@ -3,20 +3,22 @@
 </style>
 
   <div class="postheader">
-    <div class="cover_photo_new">
+    <div class="cover_photo">
         <%= simple_form_for @post do |f| %>
             <%= f.input :cover_photo, label: false %>
         <div class="title_intro">
             <%= f.input :title, placeholder: 'Title of your story', :id => 'post_title', label: false %>
             <%= f.input :intro, placeholder: 'Short Intro', :id => 'post_intro', label: false %>
-       <h2>By <%= current_user.full_name %></h2>
+       <h2>By <%= @post.user.full_name %></h2>
       </div>
     </div>
   </div>
+    <div class="post_body">
         <%= f.input :body, placeholder: 'Tell your story', label: false, class: 'post_body' %>
 
         <%= f.button :submit %>
         <% end %>
+    </div>
 <script>
 AlloyEditor.editable('post_body');
 

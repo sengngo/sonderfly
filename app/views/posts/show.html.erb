@@ -1,34 +1,19 @@
 <style media="screen">
   .cover_photo { background-image: url(<%= @post.cover_photo %>); }
 </style>
- <div class="postheader">
-    <div class="cover_photo">
-    	<%= simple_form_for @post do |f| %>
-    		<%= f.input :cover_photo, label: false %>
-        <div class="title_intro">
-    		<%= f.input :title, placeholder: 'Title of your story', :id => 'post_title', label: false %>
-    		<%= f.input :intro, placeholder: 'Short Intro', :id => 'post_intro', label: false %>
-       <h2>By <%= @post.user.full_name %></h2>
-      </div>
-    </div>
-  </div>
-
+	<div class="postheader">
+	  <div class="cover_photo">
+	  	<div class="title_intro">
+		    <h1><i><%= @post.title %></i></h1>
+		    <h2><%= @post.intro %></h2>
+		    <p>By <%= @post.user.full_name %></p>
+		  </div>
+		</div>
+	</div>
 <div class="post_body">
-
-		<%= simple_format(@post.body, {}, {:sanitize => false}) %>
-		<% if @post.user == current_user %>
-		<%= link_to "Edit", edit_post_path(@post) %>
-		<%= link_to 'Delete', post_path(@post), :method => :delete, :date => {:confirm => 'Are you sure? This cannot be undone'} %>
-		<% end %>
-		<div id="comments">
-			<h2><%= comment_count=pluralize(@post.comments.count, "Comment") %></h2>
-				<% @post.comments.each do |comment| %>
-				<div class="comment">
-					<p><%= comment.user.full_name %></p>
-					<p><%= comment.message %></p>
-				</div>
-				<% end %>
-		</div> <!-- coment -->
-
-		<%= render "comments/form" %>
-</div> <!-- post_body -->
+  <%= simple_format(@post.body, {}, {:sanitize => false}) %>
+  <% if @post.user == current_user %>
+	  <%= link_to "Edit", edit_post_path(@post) %>
+	  <%= link_to 'Delete', post_path(@post), :method => :delete, :date => {:confirm => 'Are you sure? This cannot be undone'} %>
+	<% end %>
+</div>

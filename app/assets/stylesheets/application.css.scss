@@ -16,6 +16,10 @@ $white: #fff;
 $lightgrey: #D3D3D3;
 $darkgrey: #808080;
 
+a {
+	text-decoration: none;
+}
+
 .btn {
   display: inline-block;
   width: 200px;
@@ -62,9 +66,14 @@ $darkgrey: #808080;
 		} /* -- cover_photo -- */
 	} /* -- postheader -- */
 
-.postbody {
+.post_body {
 		width: 80%;
+		margin: 50px auto;
 		font-size: $text;
+
+		img {
+			width: 100%;
+		}
 	}
 
 .ae-editable {

@@ -1,6 +1,4 @@
 	<%= form_for([@post, @post.comments.build]) do |f| %>
-		<p>
-			<%= f.text_area :message, label: "Reply to thread" %>
-		</p>
+		<p><%= f.text_area :message, label: "Reply to thread" %></p>
 		<%= f.submit :class => 'btn' %>
 	<% end %>
