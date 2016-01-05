@@ -17,21 +17,43 @@
   </div>
 
 
- <div class="main" id="theGrid" >
-    <h1>Latest Posts</h1>
-    <section class="grid">
-      <% @posts.each do |post| %>
-      <div class='grid__item'>
-        <%= image_tag post.cover_photo, class: 'cover_photo_index' %>
-        <h2 class="title title--preview"><%= link_to post.title, post %></h2>
-        <span class="category"><%= post.intro %></span>
-        <div class="meta meta--preview">
-          <p class="author"> By <%= post.user.full_name %></p>
-          <span class="meta__date"><i class="fa fa-calendar-o"></i><%= post.created_at.strftime("%b %d, %Y") %></span>
-          <span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span>
-        </div> <!-- meta meta-preview -->
-      </div>
-      <% end %>
-  </div><!-- /main -->
+ <% if user_signed_in? %>
+  <p id="into">
+    Hello <%= current_user.full_name %>
+  </p>
+  <br />
+  <span>
+    Share your inspiration and see what's inspiring others.
+  </span>
+
+  <% else %>
+
+  <p id="intro">
+    What's your muse?
+  </p>
+  <span>
+    Share your inspiration and see what's inspiring others.
+  </span>
+<% end %>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= image_tag post.cover_photo, class: 'post' %>
+    <div class="post_content">
+      <h2><%= link_to post.title, post %></h2>
+      <div class="data clearfix">
+        <p class="username">
+          Written by <%= post.user.full_name %>
+        </p>
+      <p class="buttons">
+        <span>
+          <i>
+          <%= post.comments.count %> 
+        </i>
+        </span>
+
+    </div>
+  <% end %>
+</div>
 
 

@@ -6,21 +6,26 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-	<body class="cbp-spmenu-push">
+	<body>
+		<header>
+			<div class="wrapper clearfix">
+				<div id="logo">
+					<%= link_to "Sonderfly", root_path %>
+				</div>
 
+				<%= render 'layouts/nav' %>
 
-<%= render 'layouts/nav' %>
-
-	<%= yield %>
-
-
-<% if notice.present? %>
-  <p class="alert alert-info"><%= notice %></p>
-<% end %>
-<% if alert.present? %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-
+			<% if notice.present? %>
+			  <p class="alert alert-info"><%= notice %></p>
+			<% end %>
+			<% if alert.present? %>
+			  <p class="alert alert-danger"><%= alert %></p>
+			<% end %>
+			 </div>
+		</header>
+	<div class="wrapper">
+		<%= yield %>
+	</div>
 
 </body>
 </html>

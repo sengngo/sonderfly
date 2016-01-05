@@ -1,8 +1,6 @@
-<div class="comment-form">
 	<%= form_for([@post, @post.comments.build]) do |f| %>
 		<p>
-			<%= f.text_area :message, :placeholder => 'Share your thoughts on this story', label: false %>
+			<%= f.text_area :message, label: "Reply to thread" %>
 		</p>
-		<%= f.submit 'Comment', :class => 'button' %>
+		<%= f.submit :class => 'btn' %>
 	<% end %>
-</div>

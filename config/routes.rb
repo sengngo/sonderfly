@@ -3,9 +3,12 @@ Sonderfly::Application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   authenticated do
-    root :to => 'users#dashboard', as: :authenticated
+    root :to => 'users#welcome', as: :authenticated
   end
+  
   get 'dashboard' => 'users#dashboard', as: "user_dashboard"
+  get 'welcome' => 'users#welcome', as: "welcome"
+
   root :to => 'static_pages#welcome'
   
   get "static_pages/about_sonderfly" => 'static_pages#about_sonderfly'
