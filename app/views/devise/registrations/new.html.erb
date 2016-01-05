@@ -1,6 +1,8 @@
-<div class="wrapper_wide_sessions">
-  <div class="wrapper_skinny_sessions">
-  <h2>Sign up</h2>
+<div class="form_wrapper">
+  <div class="form">
+    <div id="logo">
+          <%= link_to image_tag("sonderfly_logo_white.png", size: '185x50'), root_path %>
+    </div>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -18,7 +20,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up", class: 'button button_highlight' %>
+      <%= f.button :submit, "Sign up", class: 'btn' %>
       <p> By creating an account, I accept <%= link_to "Sonderfly's Terms of Service", "#" %>.</p>
     </div>
   <% end %>

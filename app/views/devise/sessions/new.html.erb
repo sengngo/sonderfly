@@ -1,11 +1,12 @@
-<div class="wrapper_wide_sessions">
-	  <div class="wrapper_skinny_sessions">
-		<h2>Log in</h2>
-
+<div class="form_wrapper">
+	<div class="form">
+		<div id="logo">
+					<%= link_to image_tag("sonderfly_logo_white.png", size: '185x50'), root_path %>
+		</div>
 		<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 		  <div class="form-inputs">
-		    <%= f.input :email, frequired: false, autofocus: true %>
-		    <%= f.input :password, required: false %>
+		    <%= f.input :email, placeholder: 'Email', required: false, autofocus: true, label: false %>
+		    <%= f.input :password, placeholder: 'Password', required: false, label: false  %>
 		    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
 		  </div>
 

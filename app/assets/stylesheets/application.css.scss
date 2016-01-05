@@ -16,14 +16,20 @@ $white: #fff;
 $lightgrey: #D3D3D3;
 $darkgrey: #808080;
 
+h1, h2, h3, h4, h5 {
+	margin-bottom: 10px;
+}
+
 a {
 	text-decoration: none;
+	margin-bottom: 5px;
 }
 
 .btn {
   display: inline-block;
   width: 200px;
-  padding: 8px;
+  margin: 10px;
+  padding: 10px;
   color: #fff;
   border: 2px solid #fff;
   text-align: center;
@@ -80,4 +86,97 @@ a {
 	width: 80%;
 	margin: 50px auto;
 	font-size: $text;
+}
+
+
+/* ---- Devise Forms ---- */
+.form_wrapper {
+		position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $color_secondary;
+	.form {
+		min-width: 300px;
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    margin-left: -220px;
+    margin-top: -200px;
+    color: $white;
+    text-align: center;
+
+    a {
+    	color: $white;
+    }
+	}
+}
+
+#logo {
+	margin-bottom: 30px;
+}
+
+.form-input {
+	font-size: 1.5rem;
+}
+
+#user_first_name {
+	width: 440px;
+	margin: 5px;
+	height: 2rem;
+	padding-left: 10px;
+	background-color: transparent;
+	color: $white;
+}
+
+#user_last_name {
+	width: 440px;
+	margin: 5px;
+	height: 2rem;
+	padding-left: 10px;
+	background-color: transparent;
+	color: $white;
+}
+
+#user_email {
+	width: 440px;
+	margin: 5px;
+	height: 2rem;
+	padding-left: 10px;
+	background-color: transparent;
+	color: $white;
+}
+
+
+#user_password {
+	width: 440px;
+	margin: 5px;
+	height: 2rem;
+	padding-left: 10px;
+	background-color: transparent;
+	color: $white;
+}
+
+#user_password_confirmation {
+	width: 440px;
+	margin: 5px;
+	height: 2rem;
+	padding-left: 10px;
+	background-color: transparent;
+	color: $white;
+}
+
+#user_current_password {
+	width: 440px;
+	margin: 5px;
+	height: 2rem;
+	padding-left: 10px;
+	background-color: transparent;
+	color: $white;
+}
+
+#user_remember_me {
+	margin-right: 5px;
 }
