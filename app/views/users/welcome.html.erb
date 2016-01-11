@@ -1,9 +1,1 @@
-<h1>Explore</h1>
-<div class="post_list">
-	<% @posts.each do |post| %>
-		<%= image_tag post.cover_photo, class: 'post_list' %> 
-		<h1><%= link_to post.title, post %></h1>
-		<%= post.intro %>
-		<%= post.user.full_name %>
-	<% end %>
-</div>
+<%= render 'posts/post_list' %>

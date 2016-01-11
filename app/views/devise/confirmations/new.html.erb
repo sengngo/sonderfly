@@ -1,4 +1,8 @@
-<div class="wrapper">
+<div class="form_wrapper">
+	<div class="form">
+		<div id="logo">
+					<%= link_to image_tag("sonderfly_logo_white.png", size: '185x50'), root_path %>
+		</div>
 	<h2>Resend confirmation instructions</h2>
 
 	<%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
@@ -15,4 +19,5 @@
 	<% end %>
 
 	<%= render "devise/shared/links" %>
+	</div>
 </div>

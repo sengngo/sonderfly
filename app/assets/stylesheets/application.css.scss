@@ -3,18 +3,19 @@
  *= require_tree .
  *= require alloyeditor/dist/alloy-editor/assets/alloy-editor-ocean
  */
-
 $white: #fff;
 $headline: 4rem;
+$title: serf;
+$body-font: san-serif;
 $subhead: 2rem;
 $text: 1rem;
-$post_width: 300px;
 $color_primary: #5CC7DC;
 $color_secondary: #142D3F;
 $black: #000;
 $white: #fff;
 $lightgrey: #D3D3D3;
-$darkgrey: #808080;
+$darkgrey: #505050;
+
 
 h1, h2, h3, h4, h5 {
 	margin-bottom: 10px;
@@ -23,6 +24,60 @@ h1, h2, h3, h4, h5 {
 a {
 	text-decoration: none;
 	margin-bottom: 5px;
+}
+
+body {
+
+}
+
+nav {
+	background-color: transparent;
+	width: 100%;
+	float: left;
+	vertical-align: center;
+}
+
+.wrapper_60 {
+	width: 60%;
+	margin: auto;
+	color: white;
+}
+
+.center {
+	min-width: 300px;
+  top: 45%;
+  left: 50%;
+  color: $white;
+  text-align: center;
+  padding-top: 15%;
+}
+
+#logo {
+	float: left;
+	text-decoration: none;
+	display: inline-block;
+}
+
+#home_background {
+	background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url(../assets/homepage_background.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+
+	h1 {
+		color: $white;
+		font-size: 3.5rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+		margin: 7rem 0 2rem 0;
+
+	}
+}
+
+.float-right {
+	float: right;
+	margin-right: 20px;
 }
 
 .btn {
@@ -57,6 +112,7 @@ a {
 		.cover_photo {
 			height: 100vh;
 			background-size: cover;
+			background-color: $color_secondary;
 
 			.title_intro {
 
@@ -79,6 +135,7 @@ a {
 
 		img {
 			width: 100%;
+			height: 100%;
 		}
 	}
 
@@ -88,6 +145,54 @@ a {
 	font-size: $text;
 }
 
+/*--- Posts List ---*/
+
+.postlist_wrapper {
+	width: 60%;
+	text-align: center;
+	margin: auto;
+
+	.post_list {
+		display: block;
+		margin: auto;
+		padding: 0;
+		vertical-align: top;
+		float: left;
+		background-color: $white;
+		color: $darkgrey;
+		overflow: hidden;
+		border: 1px solid $lightgrey;
+		position: center;
+
+		a {
+			color: $color_secondary;
+		}
+
+		img {
+    	display: block;
+    	width: 100% !important;
+    	height: auto !important;
+    	position: relative;
+			left: 50%;
+			transform: translate(-50%,0)
+		}
+
+		.postlist_content_wrapper {
+			width: 90%;
+			height: 20%;
+			margin: auto;
+			height: 200px;
+
+			.postlist_contentintro {
+				max-height: 400px;
+				overflow: hidden;
+			}
+			.post_details {
+				margin-top: 10px;
+			}
+		}
+	}
+}
 
 /* ---- Devise Forms ---- */
 .form_wrapper {
@@ -96,12 +201,12 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     background-color: $color_secondary;
+
 	.form {
 		min-width: 300px;
     position: fixed;
-    top: 48%;
+    top: 45%;
     left: 50%;
     margin-left: -220px;
     margin-top: -200px;
@@ -112,10 +217,6 @@ a {
     	color: $white;
     }
 	}
-}
-
-#logo {
-	margin-bottom: 30px;
 }
 
 .form-input {
@@ -180,3 +281,5 @@ a {
 #user_remember_me {
 	margin-right: 5px;
 }
+
+@import "media_queries"

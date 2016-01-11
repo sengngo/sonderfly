@@ -9,23 +9,16 @@
 	<body>
 		<header>
 			<div class="wrapper clearfix">
-				<div id="logo">
-					<%= link_to image_tag("sonderfly_logo.png", size: '185x50'), root_path %>
-				</div>
-
-			<%= render 'layouts/nav' %>
-
 			<% if notice.present? %>
 			  <p class="alert alert-info"><%= notice %></p>
 			<% end %>
 			<% if alert.present? %>
 			  <p class="alert alert-danger"><%= alert %></p>
 			<% end %>
-			 </div>
+			</div>
 		</header>
-	<div class="wrapper">
+		<%= render 'layouts/nav' %>
 		<%= yield %>
-	</div>
 
 </body>
 </html>

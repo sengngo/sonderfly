@@ -9,7 +9,7 @@
         <div class="title_intro">
             <%= f.input :title, placeholder: 'Title of your story', :id => 'post_title', label: false %>
             <%= f.input :intro, placeholder: 'Short Intro', :id => 'post_intro', label: false %>
-       <h2>By <%= @post.user.full_name %></h2>
+       <h2>By <%= current_user.full_name %></h2>
       </div>
     </div>
   </div>

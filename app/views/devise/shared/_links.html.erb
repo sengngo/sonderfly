@@ -4,6 +4,7 @@
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+	<h3>Want sign up for an account?</h3>
   <%= link_to "Sign up", new_registration_path(resource_name), class: 'btn' %><br />
 <% end -%>
 

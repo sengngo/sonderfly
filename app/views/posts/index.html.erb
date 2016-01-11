@@ -17,29 +17,4 @@
   </span>
 <% end %>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <div class="post">
-      <div class="post_image">
-       <%= link_to (image_tag post.cover_photo.url), post %>
-      </div>
-
-      <div class="post_content">
-        <h2><%= link_to post.title, post %></h2>
-        <div class="data clearfix">
-        <p class="username">
-          Written by <%= post.user.full_name %>
-        </p>
-      <p class="buttons">
-        <span>
-          <i>
-          <%= post.comments.count %> Comments
-        </i>
-        </span>
-      </div>
-
-
-  </div><!-- .posts -->
-</div><!-- id#posts -->
-
-  <% end %>
+<%= render 'posts/post_list' %>

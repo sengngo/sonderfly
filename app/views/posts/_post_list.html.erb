@@ -1,0 +1,18 @@
+	<h1>Explore</h1>
+	<div class="postlist_wrapper">
+			<% @posts.each do |post| %>
+				<div class="post_list">
+				<%= image_tag post.cover_photo, class: 'coverphoto_list' %> 
+				<div class="postlist_content_wrapper">
+						<div class="postlist_content">
+							<h2><%= link_to post.title, post %></h2>
+							<div class="postlist_contentintro"><%= post.intro %></div>
+							<div class="post_details">
+							<strong><%= post.user.full_name %></strong> · <%= post.created_at.strftime("%b %d, %Y") %>
+							</div>
+						</div>
+					</div>
+				</div>
+			<% end %>
+	</div>
+</div>
