@@ -2,11 +2,10 @@
   .cover_photo { background-image: url(<%= @post.cover_photo %>); }
 </style>
 
-  <div class="postheader">
-    <div class="cover_photo">
+  <div class=".cover_photo">
+    <div class="post_header">
         <%= simple_form_for @post do |f| %>
             <%= f.input :cover_photo, label: false %>
-        <div class="title_intro">
             <%= f.input :title, placeholder: 'Title of your story', :id => 'post_title', label: false %>
             <%= f.input :intro, placeholder: 'Short Intro', :id => 'post_intro', label: false %>
        <h2>By <%= current_user.full_name %></h2>

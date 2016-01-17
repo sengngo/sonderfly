@@ -9,4 +9,4 @@ class CoverPhotosController < ApplicationController
 	def cover_photo_params
 		params.require(:cover_photo).permit(:caption)
 	end
-endd
+end
