@@ -1,1 +1,20 @@
+<%= render 'layouts/nav' %>
+	<% if user_signed_in? %>
+		<p id="intro">
+			<%= render 'layouts/notice' %>
+			Hello <%= current_user.full_name %>
+			<br />
+		<span>
+			Share your inspiration and see what's inspiring others.
+		</span>
+	<% else %>
+		<p id="intro">
+			Read 
+			<br />
+		<span>
+			Hello World
+		</span>
+
+	<% end %>
+
 <%= render 'posts/post_list' %>

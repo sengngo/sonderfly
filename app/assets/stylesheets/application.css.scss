@@ -62,8 +62,8 @@ a {
 .button-color {
 	padding: .7rem 1.25rem;
 	outline: none;
-	background: $color_secondary;
-	color: $color_primary;
+	border: 2px solid $color_secondary;
+	color: $color_secondary;
 	font-size: 1rem;
 }
 
@@ -76,6 +76,7 @@ a {
 .float-right {
 	float: right;
 	margin-right: 1rem;
+	margin-top: .5rem;
 }
 
 .featured {
@@ -86,8 +87,10 @@ a {
 
 header {
 	width: 100%;
-	padding: 1rem 0;
+	min-height: 75px;
 	margin: 0;
+	background-color: transparent;
+	padding-top: 1.5%;
 	#logo {
 		float: left;
 		margin-left: 1rem;
@@ -101,7 +104,6 @@ header {
 		}
 	}
 	nav {
-		float: right;
 		color: $white;
 
 		a {
@@ -111,6 +113,15 @@ header {
 			&:hover {
 				color: $color_primary;
 			}
+
+		.button {
+		padding: .7rem 1.25rem;
+		outline: none;
+		background: $white;
+		color: #000;
+		font-size: 1rem;
+			}
+
 		}
 	}
 }

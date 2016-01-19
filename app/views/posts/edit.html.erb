@@ -1,5 +1,5 @@
 <style media="screen">
-  .cover_photo { background-image: url(<%= @post.cover_photo %>); }
+  .cover_photo { background-image: url(<%= @post.cover_photo.url(:large) %>); }
 </style>
 
   <div class="postheader">

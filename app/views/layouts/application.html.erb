@@ -7,18 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 	<body>
-		<header>
-			<div class="wrapper clearfix">
-			<% if notice.present? %>
-			  <p class="alert alert-info"><%= notice %></p>
-			<% end %>
-			<% if alert.present? %>
-			  <p class="alert alert-danger"><%= alert %></p>
-			<% end %>
-			</div>
-		</header>
-		<%= render 'layouts/nav' %>
+		
+	<div class="wrapper clearfix">
 		<%= yield %>
-
+	</div>
+	
 </body>
 </html>

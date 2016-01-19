@@ -1,11 +1,12 @@
   <div id='home_background'>
-    <div class="welcome_containter">
+    <%= render 'layouts/nav' %>
+    <div class="welcome_containter vertical-align">
       <h1>Together, <br /> let's discover the world!</h1>
         <p class="welcome">
         For those living the traveler's mindset, Sonderfly is a platform to connect people through authentic conversations and provide the space to share stories, insights, and support. Join to tell your story and build a community of travelers.
       </p>
-      <%= link_to "Get Started", new_user_registration_path, class: "btn" %>
-      <%= link_to "EXPLORE", posts_path, class: "btn" %>
+      <%= link_to "Get Started", new_user_registration_path, class: "button" %>
+      <%= link_to "EXPLORE", posts_path, class: "button" %>
     </div>
   </div>
 

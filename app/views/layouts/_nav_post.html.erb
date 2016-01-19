@@ -1,0 +1,19 @@
+<header>
+  <nav class="vertical-align">
+    <div id="logo">
+      <%= link_to image_tag("sonderFly_symbol_white.png"), root_path %>
+    </div>
+    <% if user_signed_in? %>
+      <div class="float-right">
+        <%= link_to "New Post", new_post_path, class: "button"%> 
+        <%= link_to "Sign Out", destroy_user_session_path,  class: "button", method: :delete %>
+        </div>
+    <% else %>
+      <%= link_to "Explore", posts_path %>
+        <div class="float-right">
+        <%= link_to "Join", new_user_session_path %> |
+        <%= link_to "Sign Up", new_user_registration_path, class: 'button' %>   
+        </div>   
+    <% end %>
+  </nav>
+</header>
