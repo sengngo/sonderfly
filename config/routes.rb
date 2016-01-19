@@ -6,7 +6,6 @@ Sonderfly::Application.routes.draw do
     root :to => 'users#welcome', as: :authenticated
   end
   
-  get 'dashboard' => 'users#dashboard', as: "user_dashboard"
   get 'welcome' => 'users#welcome', as: "welcome"
 
   root :to => 'static_pages#welcome'

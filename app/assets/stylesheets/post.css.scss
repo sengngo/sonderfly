@@ -3,7 +3,12 @@
 	margin: auto;
 	font-size: 1.25rem;
 	font-weight: 300;
-	
+		
+	.cke_editable {
+		min-height: 500px;
+		border: 2px solid $color_primary;
+		margin: 1rem;
+	}
 	img {
 		width: 100%;
 	}

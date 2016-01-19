@@ -2,8 +2,9 @@
   .cover_photo { background-image: url(<%= @post.cover_photo.url(:large) %>); }
 </style>
 
-  <div class="postheader">
-    <div class="cover_photo">
+  <div class="cover_photo">
+    <%= render 'layouts/nav' %>
+    <div class="post_header vertical-align">
     	<%= simple_form_for @post do |f| %>
     		<%= f.input :cover_photo, label: false %>
         <div class="title_intro">
@@ -13,10 +14,12 @@
       </div>
     </div>
   </div>
-    	<%= f.input :body, placeholder: 'Tell your story', label: false, class: 'post_body' %>
+  <div class="post_body">
+  	<%= f.input :body, placeholder: 'Tell your story', label: false %>
 
     	<%= f.button :submit %>
-    	<% end %>
+    <% end %>
+  </div>
 <script>
 AlloyEditor.editable('post_body');
 
