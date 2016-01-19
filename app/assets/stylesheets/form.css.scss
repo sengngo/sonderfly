@@ -9,11 +9,13 @@ form {
 	.form_wrapper {
 		height: 100vh;
 		background-color: $color_secondary;
+		overflow: scroll;
 	}
 
 	.form {
 		width: 60%;
 		margin: auto;
+		text-align: center;
 
 		#logo{ 
 		padding: 1rem;

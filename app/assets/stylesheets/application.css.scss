@@ -59,6 +59,15 @@ a {
 	font-size: 1rem;
 }
 
+.btn {
+	padding: .7rem 1.25rem;
+	outline: none;
+	background: $white;
+	color: #000;
+	font-size: 1rem;
+	border: none;
+}
+
 .button-color {
 	padding: .7rem 1.25rem;
 	outline: none;
@@ -128,4 +137,4 @@ header {
 
 @import 'home.css.scss';
 @import 'post.css.scss';
-@import 'users.css.scss';
+@import 'form.css.scss';
