@@ -1,0 +1,16 @@
+<div id="posts">
+	<% @posts.each do |post| %>
+		<div class="post">
+			<div class="post_image">
+					<%= image_tag post.cover_photo.url(:medium) %> 
+			</div><!-- post_image -->
+			<div class="post_content">
+				<h2><%= link_to post.title, post %></h2>
+				<div class="data clearfix">
+					<p class="username"><%= post.user.full_name %> · <%= post.created_at.strftime("%b %d, %Y") %>
+					</p>
+				</div><!-- post_content -->
+			</div><!-- data clearfix -->
+	</div><!-- posts -->
+	<% end %>
+</div><!-- #posts -->

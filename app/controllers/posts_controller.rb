@@ -7,9 +7,12 @@ class PostsController < ApplicationController
 		@last = Post.last
 	end
 
+	def _post_list_user 
+		@posts = current_user.posts.order("created_at DESC")
+	end
+
 	def show
 		@comments = Comment.where(post_id: @post)
-
 	end
 
 	def new

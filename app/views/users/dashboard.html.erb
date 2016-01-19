@@ -1,18 +1,2 @@
-<div id="posts">
-  <h1>Your Posts</h1>
-  <% @posts.each do |post| %>
-    <%= image_tag post.cover_photo, class: 'post' %>
-    <div class="post_content">
-      <h2><%= link_to post.title, post %></h2>
-      <p><%= post.intro %>
-      <div class="data clearfix">
-      <p class="buttons">
-        <span>
-          <i>
-          <%= post.comments.count %> Comments
-        </i>
-        </span>
-
-    </div>
-  <% end %>
-</div>
+<h1>Your Posts</h1>
+<%= render 'posts/post_list_user' %>
