@@ -3,7 +3,7 @@
 </style>
 
   <div class="cover_photo">
-    <%= render 'layouts/nav' %>
+    <%= render 'layouts/nav_white' %>
     <div class="post_header vertical-align">
         <%= simple_form_for @post do |f| %>
             <%= f.input :cover_photo, label: false %>
@@ -12,12 +12,11 @@
        <h2>By <%= current_user.full_name %></h2>
     </div><!-- post_header -->
   </div><!-- cover photo -->
-  <div class="post_body">
-    <%= f.input :body, placeholder: 'Tell your story', label: false, class: 'post_body' %>
-
-    <%= f.submit "Create Post", class: "button" %>
+    <%= f.input :body, placeholder: 'Tell your story', label: false %>
+  <div class="center">
+    <%= f.submit "Create Post", class: "button-color" %>
     <% end %>
-  </div><!-- post_body -->
+  </div>
 
 <script>
 AlloyEditor.editable('post_body');

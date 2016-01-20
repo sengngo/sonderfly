@@ -1,7 +1,6 @@
 <%= render 'layouts/nav' %>
 	<% if user_signed_in? %>
 		<p id="intro">
-			<%= render 'layouts/notice' %>
 			Hello <%= link_to current_user.full_name, users_dashboard_path  %>
 			<br />
 		<span>

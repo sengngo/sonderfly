@@ -38,7 +38,6 @@ form {
 			max-width: 600px;
 			height: 2rem;
 			margin: .5rem 0;
-			color: $white;
 			font-size: 1rem;
 			border: none;
 		}
@@ -47,6 +46,19 @@ form {
 			padding: 1.5%;
    		/* omg so much cleaner */
 		}
+
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: red;
+}
 	}
 
 	.btn {

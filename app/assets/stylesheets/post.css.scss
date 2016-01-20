@@ -6,16 +6,23 @@
 		
 	.cke_editable {
 		min-height: 500px;
-		border: 2px solid $color_primary;
+		border: 1px solid $darkgrey;
 		margin: 1rem;
+		padding: 1.5%;
 	}
 	img {
 		width: 100%;
 	}
 }
 
+.post_buttons {
+	width: 80%;
+	margin: 1rem;
+	padding: 1.5%;
+}
+
 .post_content {
-	width: 90%;
+	width: 100%;
 	margin: auto;
 	font-size: 1.5rem;
 }
@@ -38,6 +45,9 @@
 			background-color: transparent;
 			font-size: 3rem;
 			text-align: center;
+			color: $white;
+			border: 1px solid $white;
+			margin-bottom: 1.5%;
 		}
 
 		#post_intro {
@@ -47,6 +57,8 @@
 			background-color: transparent;
 			border: none;
 			text-align: center;
+			color: $white;
+			border: 1px solid $white;
 		}
 	}
 }

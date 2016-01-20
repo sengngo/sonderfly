@@ -8,6 +8,7 @@ $color_secondary: #142D3F;
 $white: #fff;
 $black: #000;
 $lightgrey: #F8F9FA;
+$darkgrey: #08090A;
 
 body {
 	font-family: sans-serif;
@@ -23,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 	text-decoration: none;
+}
+
+.alert_container {
+	min-height: 75px;
 }
 
 .wrapper {
@@ -51,12 +56,19 @@ a {
 	text-align: center;
 }
 
+.center_btn {
+	margin: auto;
+	display: inline-block;
+	text-align: center;
+}
+
 .button {
 	padding: .7rem 1.25rem;
 	outline: none;
 	background: $white;
 	color: #000;
 	font-size: 1rem;
+	border: none;
 }
 
 .btn {
@@ -71,9 +83,10 @@ a {
 .button-color {
 	padding: .7rem 1.25rem;
 	outline: none;
-	border: 2px solid $color_secondary;
+	border: 1px solid $color_secondary;
 	color: $color_secondary;
 	font-size: 1rem;
+	background-color: transparent;
 }
 
 .vertical-align {
