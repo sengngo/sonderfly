@@ -19,11 +19,16 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
+	margin: 1rem;
 }
 
 
 a {
 	text-decoration: none;
+}
+
+a:visited {
+	color: $color_primary;
 }
 
 .alert_container {
@@ -78,6 +83,7 @@ a {
 	color: #000;
 	font-size: 1rem;
 	border: none;
+	margin: 1.5%;
 }
 
 .button-color {
@@ -99,6 +105,10 @@ a {
 	float: right;
 	margin-right: 1rem;
 	margin-top: .5rem;
+}
+
+.float-left {
+	float: right;
 }
 
 .featured {
