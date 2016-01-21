@@ -30,7 +30,6 @@ class CommentsController < ApplicationController
 	end
 
 	def destroy
-
 		if @comment.user != current_user
 			return render :text => 'Not Allowed', :status => :forbidden
 		end
