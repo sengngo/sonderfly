@@ -27,20 +27,12 @@ a {
 	text-decoration: none;
 }
 
-a:visited {
-	color: $color_primary;
-}
-
 footer { 
 	width: 100%;
 	background-color: $color_secondary;
 	color: $white;
 	margin-top: 3%;
 	
-	.container {
-		width: 100%;
-	}
-
 	#logo {
 		margin: 1.5%;
 		display: inline-block;
@@ -132,6 +124,7 @@ footer {
 
 .float-left {
 	float: left;
+	margin-right: 1.5%;
 }
 
 .featured {
