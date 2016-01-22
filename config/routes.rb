@@ -12,6 +12,7 @@ Sonderfly::Application.routes.draw do
   
   get "static_pages/about_sonderfly" => 'static_pages#about_sonderfly'
   get "static_pages/guidelines" => 'static_pages#guidelines'
+  get "static_pages/terms_service" => 'static_pages#terms_service'
 
 
   resources :posts do

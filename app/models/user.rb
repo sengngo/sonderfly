@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :post_photos
   has_many :cover_photos
   has_many :comments
+  has_many :bookmarks
 
   mount_uploader :profile_photo, ProfilePhotoUploader
 

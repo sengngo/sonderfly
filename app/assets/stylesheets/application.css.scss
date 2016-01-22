@@ -31,6 +31,31 @@ a:visited {
 	color: $color_primary;
 }
 
+footer { 
+	width: 100%;
+	background-color: $color_secondary;
+	color: $white;
+	margin-top: 3%;
+	
+	.container {
+		width: 100%;
+	}
+
+	#logo {
+		margin: 1.5%;
+		display: inline-block;
+	}
+
+	a {
+		color: white;
+		margin-left: 1.5%;
+	}
+
+	img {
+		vertical-align: middle;
+	}
+}
+
 .alert_container {
 	min-height: 75px;
 }
@@ -103,12 +128,10 @@ a:visited {
 
 .float-right {
 	float: right;
-	margin-right: 1rem;
-	margin-top: .5rem;
 }
 
 .float-left {
-	float: right;
+	float: left;
 }
 
 .featured {
