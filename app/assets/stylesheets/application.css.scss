@@ -24,7 +24,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 a {
+	line-height: 2;
+	color: inherit;
 	text-decoration: none;
+	&:hover {
+		color: $color_primary;
+	}
 }
 
 footer { 
@@ -32,21 +37,35 @@ footer {
 	background-color: $color_secondary;
 	color: $white;
 	margin-top: 3%;
-	
+
 	#logo {
 		margin: 1.5%;
 		display: inline-block;
 	}
 
 	a {
-		color: white;
+		line-height: 2;
+		color: $white;
+		text-decoration: none;
+		&:hover {
+			color: $color_primary;
+		}
 		margin-left: 1.5%;
 	}
-
 	img {
 		vertical-align: middle;
+		display: inline-block; 
+	}
+	ul {
+		white-space: nowrap;
+		list-style-type: none;
+		li {
+			float: left;
+			margin-left: 1rem;
+		}
 	}
 }
+
 
 .alert_container {
 	min-height: 75px;
@@ -120,11 +139,11 @@ footer {
 
 .float-right {
 	float: right;
+	margin-right: 1.5%;
 }
 
 .float-left {
 	float: left;
-	margin-right: 1.5%;
 }
 
 .featured {

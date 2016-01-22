@@ -5,13 +5,13 @@
     <nav>
     <% if user_signed_in? %>
       <div class="float-right">
-        <%= link_to "New Post", new_post_path, class: "button"%> 
-        <%= link_to "Sign Out", destroy_user_session_path,  class: "button", method: :delete %>
+        <%= link_to "New Post", new_post_path, class: "button-color"%> | 
+        <%= link_to "Sign Out", destroy_user_session_path,  class: "button-color", method: :delete %>
         </div>
     <% else %>
         <div class="float-right">
-        <%= link_to "Join", new_user_registration_path, class: 'button' %> |
-        <%= link_to "Log In", new_user_session_path, class: 'button' %>
+        <%= link_to "Join", new_user_registration_path, class: 'button-color' %> |
+        <%= link_to "Log In", new_user_session_path, class: 'button-color' %>
         
         </div>   
     <% end %>

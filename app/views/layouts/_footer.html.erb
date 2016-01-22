@@ -5,8 +5,11 @@
     </div><!-- logo -->
       <%= link_to "Terms of Service", static_pages_terms_service_path %>
       <%= link_to "Guidelines", static_pages_guidelines_path %>
-      <%= link_to image_tag("instagram.png", size: '42x42'), 'http://www.instagram.com/sonderfly' %> 
-      <%= link_to image_tag("facebook.png", size: '42x42'), 'https://www.facebook.com/SonderFly-1478745455768902/' %> 
-      <%= link_to image_tag("twitter.png", size: '42x42'), 'https://twitter.com/sonderflytravel' %> 
+    <ul class="float-right">
+      <li><%= link_to image_tag("instagram.png", size: '42x42'), 'http://www.instagram.com/sonderfly' %></li> 
+      <li><%= link_to image_tag("facebook.png", size: '42x42'), 'https://www.facebook.com/SonderFly-1478745455768902/' %></li> 
+      <li><%= link_to image_tag("twitter.png", size: '42x42'), 'https://twitter.com/sonderflytravel' %></li>
+    <ul>
+    </div>
   </div> <!-- container -->
 </footer>
